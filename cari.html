@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>senggs</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hey, senggs!</h1>
+        <p>I made these simple words just for you...</p>
+        <button id="revealBtn">click to know</button>
+        <div id="message" class="hidden">
+            <div class="typewriter">
+                <p id="typedText1"></p>
+                <p id="typedText2" class="hidden"></p>
+            </div>
+            <a href="https://wa.me/6282318390061?text=Halo,%20saya%20tertarik%20untuk%20berbicara%20lebih%20lanjut." class="wa-link">click please</a>
+            <div class="like-container">
+                <button id="likeBtn" class="like-button">❤️ Like</button>
+                <span id="likeCount">0</span> likes
+            </div>
+        </div>
+
+        <audio id="backgroundMusic" src="bunga abadi.mp3" loop></audio>
+    </div>
+
+    <script>
+        document.getElementById("revealBtn").addEventListener("click", function() {
+            document.getElementById("message").classList.remove("hidden");
+            document.getElementById("backgroundMusic").play();
+            typeWriter();
+        });
+
+        let likeCount = 0;
+        document.getElementById("likeBtn").addEventListener("click", function() {
+            likeCount++;
+            document.getElementById("likeCount").textContent = likeCount;
+        });
+
+        function typeWriter() {
+            const text1 = " 'There is only one happiness in life,";
+            const text2 = "to love and be loved'";
+            const typedText1 = document.getElementById("typedText1");
+            const typedText2 = document.getElementById("typedText2");
+            let index = 0;
+
+            function typeText1() {
+                if (index < text1.length) {
+                    typedText1.textContent += text1.charAt(index);
+                    index++;
+                    setTimeout(typeText1, 100);
+                } else {
+                    setTimeout(typeText2, 500); // Jeda sebelum mengetik paragraf kedua
+                }
+            }
+
+            function typeText2() {
+                typedText2.classList.remove("hidden");
+                index = 0;
+                function type() {
+                    if (index < text2.length) {
+                        typedText2.textContent += text2.charAt(index);
+                        index++;
+                        setTimeout(type, 100);
+                    }
+                }
+                type();
+            }
+
+            typeText1();
+        }
+    </script>
+</body>
+</html>

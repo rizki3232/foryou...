@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('yp.jpeg'); /* Ganti 'ayang.jpg' dengan nama file gambar ayang */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #ff6699;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff6699;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #f1e9eb;
+}
+
+.hidden {
+    display: none;
+}
+
+.typewriter {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #ff6699;
+    margin-top: 20px;
+}
+
+.wa-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.wa-link:hover {
+    background-color: #1EBE58;
+}
+
+.like-container {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ff6699;
+}
+
+.like-button {
+    background-color: transparent;
+    border: none;
+    color: #ff6699;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.like-button:hover {
+    color: #bbb1b3;
+}
+.background image {
+    border-radius: 100%;
+}
